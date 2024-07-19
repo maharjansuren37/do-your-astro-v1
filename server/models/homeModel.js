@@ -1,25 +1,32 @@
 const mongoose = require('mongoose');
 
 const homeSchema = mongoose.Schema({
-    home: {
-        title: {
-            type: String,
-            required: [false]
-        },
-        subtitle: {
-            type: String,
-            required: [false]
-        },
-        img: {
-            type: String,
-            required: [false]
-        }
+    heroSectionTitle: {
+        type: String,
     },
-    astroSection: {
-        
-    } ,
-    bookbinderySection: {
-
+    heroSectionSubtitle: {
+        type: String
+    },
+    heroSectionImage: {
+        type: String
+    },
+    astroSectionTitle: {
+        type: String
+    },
+    astroSectionDesc: {
+        type: String
+    },
+    astroSectionImage: {
+        type: String
+    },
+    bookbinderySectionTitle: {
+        type: String
+    },
+    bookBinderySectionDesc: {
+        type: String
+    },
+    bookBinderySectionImage: {
+        type: String
     }
 }, {
     timestamps: true,

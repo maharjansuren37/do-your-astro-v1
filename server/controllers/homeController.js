@@ -10,13 +10,29 @@ const getHome = asyncHandler(async (req, res) => {
 
 const addHome = asyncHandler(async(req, res) => {
     const home = await Home.create({
-        title: req.body.title,
+        heroSectionTitle: req.body.heroSectionTitle
     });
 
     res.status(200).json(home);
 });
 
+const updateHome = asyncHandler(async(req, res) => {
+    // if (!req.body.text) {
+    //     res.status(400);
+    //     throw new Error("Please add a text");
+    // }
+});
+
+const deleteHome = asyncHandler(async(req, res) => {
+    // if (!req.body.text) {
+    //     res.status(400);
+    //     throw new Error("Please add a text");
+    // }
+});
+
 module.exports = {
     getHome,
-    addHome
+    addHome,
+    updateHome,
+    deleteHome
 }
