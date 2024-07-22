@@ -19,9 +19,9 @@ app.use('/api/goals', require('./routes/goalRoutes'));
 
 app.use('/api/home', require('./routes/homeRoutes'));
 
-app.use('/api/astro', require('/routes/astroRoutes'));
+// app.use('/api/astro', require('/routes/astroRoutes'));
 
-app.use('/api/bookbindery',require('./routes/bookRoutes'));
+// app.use('/api/bookbindery',require('./routes/bookRoutes'));
 
 app.use(errorHandler);
 

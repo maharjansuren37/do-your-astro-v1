@@ -10,7 +10,21 @@ const getHome = asyncHandler(async (req, res) => {
 
 const addHome = asyncHandler(async(req, res) => {
     const home = await Home.create({
-        heroSectionTitle: req.body.heroSectionTitle
+        heroSection: {
+            title: req.body.heroTitle,
+            subtitle: req.body.heroSubtitle,
+            image: req.body.heroImage
+        },
+        astroSection: {
+            title: req.body.astroTitle,
+            subtitle: req.body.astroSubtitle,
+            image: req.body.astroImage
+        },
+        bookbinderySection: {
+            title: req.body.bbTitle,
+            subtitle: req.body.bbSubtitle,
+            image: req.body.bbImage
+        }
     });
 
     res.status(200).json(home);

@@ -13,13 +13,14 @@ const getGoals = asyncHandler(async (req, res) => {
 });
 
 const createGoals = asyncHandler(async (req, res) => {
-    if (!req.body.text) {
+    if (!req.body.text || !req.body.name) {
         res.status(400);
         throw new Error("Please add a text!")
     }
 
     const goal = await Goal.create({
         text: req.body.text,
+        name: req.body.name
     });
 
     res.status(200).json(goal);
