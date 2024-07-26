@@ -8,6 +8,7 @@ export default function RootLayout() {
                     <NavLink>DYA</NavLink>
                 </div>
                 <div className="nav-toggle">
+                    <h1>Hello</h1>
                     <span></span>
                 </div>
                 <nav>
