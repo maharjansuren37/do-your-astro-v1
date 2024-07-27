@@ -1,5 +1,13 @@
+import LoginForm from "../components/LoginForm";
+
 export default function Admin() {
     return (
-        <h1>Admin</h1>
+        <>
+            <div>
+                <div>Admin</div>
+                <LoginForm />
+            </div>
+            
+        </>
     )
 }
