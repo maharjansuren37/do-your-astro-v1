@@ -4,41 +4,25 @@ import {
   createRoutesFromElements, 
   RouterProvider 
 } from "react-router-dom";
-import RootLayout from "./layouts/RootLayout";
-import Admin from "./pages/Admin";
-import AdminLayout from "./layouts/AdminLayout";
-import Dashboard from "./pages/Dashboard";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Header from "./layouts/Header";
+
+import HomeRootLayout from "./layouts/Home/HomeRootLayout";
+import AdminRootLayout from "./layouts/Admin/AdminRootLayout";
+import LoginForm from "./components/LoginForm";
+import RegisterForm from "./components/RegisterForm";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      {/* <Route path="/" element={<RootLayout />}>
-      
-      </Route>
-      <Route path="/admin" element={<Admin />}>
-
-      </Route> */}
-      <Route path="/" element={<Admin />}>
-        <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/" element={<HomeRootLayout />}></Route>
+      <Route path="/admin" element={<AdminRootLayout />}>
+        {/* <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
+        <Route path="/register" element={<Register />}></Route> */}
       </Route>
-      
+      <Route path="/login" element={<LoginForm />}></Route>
+      <Route path="/register" element={<RegisterForm />}></Route>
     </> 
   )
-  // [
-  //   {
-  //     path: '/',
-  //     element: <RootLayout />
-  //   },
-  //   {
-  //     path: '/admin',
-  //     element: <Admin />
-  //   }
-  // ]
 )
 
 function App() {

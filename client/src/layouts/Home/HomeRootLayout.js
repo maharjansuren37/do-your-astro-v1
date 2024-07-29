@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 
-export default function RootLayout() {
+export default function HomeRootLayout() {
     return (
         <div>
             <header>
