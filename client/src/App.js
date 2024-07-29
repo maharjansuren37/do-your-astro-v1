@@ -9,6 +9,7 @@ import HomeRootLayout from "./layouts/Home/HomeRootLayout";
 import AdminRootLayout from "./layouts/Admin/AdminRootLayout";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
+import Form from "./components/Form";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/login" element={<LoginForm />}></Route>
       <Route path="/register" element={<RegisterForm />}></Route>
+      <Route path="/form" element={<Form />} />
     </> 
   )
 )

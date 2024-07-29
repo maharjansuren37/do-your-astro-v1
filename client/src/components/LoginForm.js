@@ -21,9 +21,9 @@ export default function LoginForm() {
 
     return (
         <>
-            <section>
+            <section className="login">
                 <h1>Login</h1>
-                <form onSubmit={onSubmit}>
+                <form onSubmit={onSubmit} className="form">
                     <div className="form-group">
                         <label htmlFor="email">Email: </label>
                         <input 
