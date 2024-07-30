@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
 
     const loginAction = async (data) => {
         try {
-            const res = await fetch("localhost:8000/api/users/login", {
+            const res = await fetch("http://localhost:8000/api/users/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -20,15 +20,15 @@ const AuthProvider = ({ children }) => {
 
             const resData = await res.json();
 
-            if (resData.data) {
-                setUser(resData.data.name);
-                setToken(resData.data.token);
-                localStorage.setItem("site", res.token);
+            if (resData) {
+                setUser(resData.name);
+                setToken(resData.token);
+                localStorage.setItem("site", resData.token);
                 navigate("/admin");
                 return;
+            } else {
+                throw new Error(res.message);
             }
-
-            throw new Error(res.message);
 
         } catch (err) {
             console.error(err);
