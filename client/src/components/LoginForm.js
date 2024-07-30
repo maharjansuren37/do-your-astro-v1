@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useAuth } from "../hooks/AuthProvider";
 
 export default function LoginForm() {
     const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ export default function LoginForm() {
     });
 
     const { email, password } = formData;
+
+    const auth = useAuth();
 
     const onChange = (e) => {
         setFormData((prevState) => ({
@@ -17,6 +20,12 @@ export default function LoginForm() {
 
     const onSubmit = (e) => {
         e.preventDefault();
+        if (formData.email !== "" && formData.password !== "") {
+            auth.loginAction(formData);
+            return;
+        }
+
+        alert("Please provide a  valid input");
     }
 
     return (
