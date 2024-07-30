@@ -37,7 +37,8 @@ function App() {
       <Router>
         <AuthProvider>
           <Routes>
-            <Route path="/login" element={<LoginForm />} />
+            <Route path="/" element={<HomeRootLayout />} />
+            <Route path="/admin/login" element={<LoginForm />} />
             <Route element={<PrivateRoute />}>
               <Route path="/admin" element={<AdminRootLayout />} />
             </Route>

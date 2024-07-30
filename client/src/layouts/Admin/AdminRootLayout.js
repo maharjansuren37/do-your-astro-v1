@@ -9,7 +9,7 @@ export default function AdminRootLayout() {
     return (
         <>
             <Header />
-            <h2>Welcome! {auth.user?.name}</h2>
+            <h2>Welcome! {auth.user}</h2>
             <button onClick={() => auth.logOut()}>Logout</button>
             <h2>Admin page</h2>
         </>
