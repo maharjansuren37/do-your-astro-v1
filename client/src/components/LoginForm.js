@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useAuth } from "../hooks/AuthProvider";
 
+import AdminHeader from "../layouts/Admin/AdminHeader";
+
 export default function LoginForm() {
     const [formData, setFormData] = useState({
         email: '',
@@ -30,6 +32,7 @@ export default function LoginForm() {
 
     return (
         <>
+            <AdminHeader />
             <section className="login">
                 <h1>Login</h1>
                 <form onSubmit={onSubmit} className="form">

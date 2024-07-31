@@ -1,5 +1,3 @@
-import LoginForm from "../../components/LoginForm";
-import Register from "../../components/RegisterForm";
 import { useAuth } from "../../hooks/AuthProvider";
 import Header from "./AdminHeader";
 

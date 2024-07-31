@@ -1,22 +1,15 @@
 // import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons';
-import { Link } from 'react-router-dom';
+import { useAuth } from '../../hooks/AuthProvider';
 
-export default function Header() {
+export default function AdminHeader() {
+    const auth = useAuth();
+
     return (
-        <header className='header'>
-            <div className='logo'>
-                <Link to='/'>GoalSetter</Link>
+        <header className='admin-header'>
+            <div className='wrapper'>
+                <span className='logo'>Do Your Astro</span>
+                {auth.token && <button onClick={() => auth.logOut()}>Logout</button>}
             </div>
-            <ul>
-                <li>
-                    <Link to='/login'>
-                        Login
-                    </Link>
-                    <Link to='/register'>
-                        Register
-                    </Link>
-                </li>
-            </ul>
         </header>
     )
 }
