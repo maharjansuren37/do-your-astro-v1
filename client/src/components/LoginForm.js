@@ -34,34 +34,40 @@ export default function LoginForm() {
         <>
             <AdminHeader />
             <section className="login-section">
-                <h1>Login</h1>
-                <form onSubmit={onSubmit} className="form">
-                    <div className="form-group">
-                        <label htmlFor="email">Email: </label>
-                        <input 
-                            type="text" 
-                            placeholder="example@email.com" 
-                            name="email" 
-                            aria-describedby="user-email" 
-                            aria-invalid="false" 
-                            onChange={onChange}
-                            value={email}
-                            required />
-                    </div>
-                    <div className="form-control">
-                        <label htmlFor="password">Password: </label>
-                        <input 
-                            type="password" 
-                            name="password"
-                            aria-describedby="user-password"
-                            aria-invalid="false"
-                            onChange={onChange}
-                            value={password}
-                            placeholder="Password"
-                            required />
-                    </div>
-                    <button type="submit">Login</button>
-                </form>
+                <div className="container">
+                    <h1>Login</h1>
+                    <form onSubmit={onSubmit} className="login-form">
+                        <div className="form-group">
+                            <label htmlFor="email">Email: </label>
+                            <input 
+                                className="form-control"
+                                type="text" 
+                                placeholder="example@email.com" 
+                                name="email" 
+                                aria-describedby="user-email" 
+                                aria-invalid="false" 
+                                onChange={onChange}
+                                value={email}
+                                required />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="password">Password: </label>
+                            <input 
+                                className="form-control"
+                                type="password" 
+                                name="password"
+                                aria-describedby="user-password"
+                                aria-invalid="false"
+                                onChange={onChange}
+                                value={password}
+                                placeholder="Password"
+                                required />
+                        </div>
+                        <div>
+                            <button type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
             </section>
         </>
         
