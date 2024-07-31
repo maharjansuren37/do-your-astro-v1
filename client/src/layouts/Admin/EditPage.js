@@ -4,11 +4,6 @@ export default function EditPage() {
             <div className="container">
                 <div>
                     <span>Home</span>
-                    <form>
-                        <div className="">
-
-                        </div>
-                    </form>
                 </div>
                 <div>
                     Astrophotography
