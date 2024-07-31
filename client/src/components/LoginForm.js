@@ -33,7 +33,7 @@ export default function LoginForm() {
     return (
         <>
             <AdminHeader />
-            <section className="login">
+            <section className="login-section">
                 <h1>Login</h1>
                 <form onSubmit={onSubmit} className="form">
                     <div className="form-group">

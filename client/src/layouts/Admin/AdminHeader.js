@@ -6,9 +6,9 @@ export default function AdminHeader() {
 
     return (
         <header className='admin-header'>
-            <div className='wrapper'>
+            <div className='container flex-d align-center justify-space-between'>
                 <span className='logo'>Do Your Astro</span>
-                {auth.token && <button onClick={() => auth.logOut()}>Logout</button>}
+                {auth.token && <button className='btn' onClick={() => auth.logOut()}>Logout</button>}
             </div>
         </header>
     )
