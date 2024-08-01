@@ -35,10 +35,10 @@ export default function LoginForm() {
             <AdminHeader />
             <section className="login-section">
                 <div className="container">
-                    <h1 className="text-center">Login</h1>
+                    <h1 className="text-center mt-1">Login</h1>
                     <form onSubmit={onSubmit} className="login-form">
                         <div className="form-group">
-                            <label htmlFor="email">Email: </label>
+                            <label htmlFor="email">Email</label>
                             <input 
                                 className="form-control"
                                 type="text" 
@@ -51,7 +51,7 @@ export default function LoginForm() {
                                 required />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="password">Password: </label>
+                            <label htmlFor="password">Password</label>
                             <input 
                                 className="form-control"
                                 type="password" 
