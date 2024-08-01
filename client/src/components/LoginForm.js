@@ -64,7 +64,7 @@ export default function LoginForm() {
                                 required />
                         </div>
                         <div>
-                            <button type="submit">Login</button>
+                            <button className="btn btn-login" type="submit">Login</button>
                         </div>
                     </form>
                 </div>
