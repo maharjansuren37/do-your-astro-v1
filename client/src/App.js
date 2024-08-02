@@ -13,6 +13,7 @@ import RegisterForm from "./components/RegisterForm";
 import Form from "./components/Form";
 import AuthProvider from "./hooks/AuthProvider";
 import PrivateRoute from "./routes/PrivateRoute";
+import EditPage from "./layouts/Admin/EditPage";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -38,6 +39,7 @@ function App() {
         <AuthProvider>
           <Routes>
             <Route path="/" element={<HomeRootLayout />} />
+            <Route path="/edit" element={<EditPage />} />
             <Route path="/admin/login" element={<LoginForm />} />
             <Route element={<PrivateRoute />}>
               <Route path="/admin" element={<AdminRootLayout />} />
