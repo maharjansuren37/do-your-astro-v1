@@ -1,8 +1,9 @@
-input {
+input, textarea {
     border: 2px solid #ccc;
     outline: none;
     padding: .5rem .7rem;
     transition: 0.5s;
+    font: inherit;
 }
 
 input:focus {
