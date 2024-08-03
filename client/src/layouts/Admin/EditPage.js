@@ -1,9 +1,9 @@
 export default function EditPage() {
     return (
         <>
-            <div className="container">
+            <div className="container mt-1">
                 <div>
-                    <h3>Home</h3>
+                    <h3 className="edit-page-title">Home</h3>
                     <form>
                         <div className="home-section">
                             <div className="form-group">
@@ -50,7 +50,7 @@ export default function EditPage() {
                             </div>
                         </div>
                         
-                        <button className="btn">Update</button>
+                        <button className="btn btn-update" type="submit">Update</button>
                     </form>
                 </div>
             </div>
