@@ -1,4 +1,50 @@
+import { useEffect, useState } from "react";
+
 export default function EditPage() {
+    const [selectedFile1, setSelectedFile1] = useState();
+    const [selectedFile2, setSelectedFile2] = useState();
+    const [preview1, setPreview1] = useState();
+    const [preview2, setPreview2] = useState();
+
+    useEffect(() => {
+        if (!selectedFile1) {
+            setPreview1(undefined);
+            return;
+        }
+
+        if (!selectedFile2) {
+            setPreview2(undefined);
+            return;
+        }
+
+        const objectUrl1 = URL.createObjectURL(selectedFile1);
+        const objectUrl2 = URL.createObjectURL(selectedFile2);
+        setPreview1(objectUrl1);
+        setPreview2(objectUrl2);
+
+        return () => {
+            URL.revokeObjectURL(objectUrl1);
+            URL.revokeObjectURL(objectUrl2);
+        };
+    }, [selectedFile1, selectedFile2]);
+
+    const onSelectFile = (e) => {
+        if (!e.target.files || e.target.files.length === 0) {
+            setSelectedFile1(undefined);
+            return;
+        }
+
+        setSelectedFile1(e.target.files[0]);
+    }
+
+    const onSelectFile2 = (e) => {
+        if (!e.target.files || e.target.files.length === 0) {
+            setSelectedFile2(undefined);
+            return;
+        }
+
+        setSelectedFile2(e.target.files[0]);
+    }
     return (
         <>
             <div className="container mt-1">
@@ -16,7 +62,9 @@ export default function EditPage() {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="hero-image" />
-                                <input className="form-control" type="file" name="hero-image" placeholder="Hero Image" accept="image/*" />
+                                {selectedFile1 && <img className="uploaded-img" src={preview1} />}
+                                <input className="form-control" type="file" name="hero-image" placeholder="Hero Image" accept="image/*" onChange={onSelectFile} />
+                                
                             </div>
                         </div>
                         
@@ -31,7 +79,8 @@ export default function EditPage() {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="astro-image" />
-                                <input className="form-control" type="file" name="astro-image" placeholder="Astro Image" accept="image/*" />
+                                {selectedFile2 && <img className="uploaded-img" src={preview2} />}
+                                <input className="form-control" type="file" name="astro-image" placeholder="Astro Image" accept="image/*" onChange={onSelectFile2} />
                             </div>
                         </div>
                         
