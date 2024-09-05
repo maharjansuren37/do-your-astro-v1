@@ -1,15 +1,21 @@
-import { NavLink, Outlet } from "react-router-dom";
+import React from "react";
+import {NavLink, Outlet } from "react-router-dom";
 
-export default function HomeRootLayout() {
+
+
+export default function RootLayout() {
+    const links = [
+        {url: '/', title: 'Home'},
+        {url:'/astrophotography', title: 'Astrophotography'},
+        {url: '/bookbindery', title: 'Bookbindery'},
+        {url: '/contact', title: 'Contact'}
+    ];
+
     return (
-        <div>
+        <>
             <header>
                 <div>
-                    <NavLink>DYA</NavLink>
-                </div>
-                <div className="nav-toggle">
-                    <h1>Hello</h1>
-                    <span></span>
+                    <NavLink>Do Your Astro</NavLink>
                 </div>
                 <nav>
                     <ul>
@@ -20,10 +26,9 @@ export default function HomeRootLayout() {
                     </ul>
                 </nav>
             </header>
-
             <main>
                 <Outlet />
             </main>
-        </div>
+        </>
     )
 }
