@@ -1,7 +1,7 @@
 import React from "react";
 
 import SingleBanner from '../components/singleBanner/singleBanner';
-import PageTile from "../components/PageTile/pageTile";
+import PageTile from "../components/pageTile/pageTile";
 import ContactForm from "../components/contactForm/ContactForm";
 import Footer from "../components/footer/footer";
 

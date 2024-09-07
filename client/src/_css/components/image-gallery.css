@@ -1,0 +1,17 @@
+.image-galleries {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-image {
+    padding: 0.5rem;
+    max-width: 33.33%;
+    flex-basis: 33.33%;    
+    aspect-ratio: 16/9;
+    cursor: pointer;
+}
+
+/* .section__image-gallery {
+    position: relative;
+} */
+

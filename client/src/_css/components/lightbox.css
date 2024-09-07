@@ -1,0 +1,60 @@
+.lightbox {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-inline: 5rem;
+    position: fixed;
+    z-index: 11111;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.lightbox .btn__close,
+.lightbox-controls .prev,
+.lightbox-controls .next {
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    cursor: pointer;
+}
+
+.lightbox .btn__close {
+    background-image: url('../../assets/icons/icon-close.svg');
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+}
+
+.lightbox-caption {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lightbox-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lightbox-controls .prev {
+    background-image: url('../../assets/icons/prev.svg');
+
+    position: absolute;
+    left: 1rem;
+    top: 45%;
+}
+
+.lightbox-controls .next {
+    background-image: url('../../assets/icons/next.svg');
+    position: absolute;
+    right: 1rem;
+    top: 45%;
+}
+
