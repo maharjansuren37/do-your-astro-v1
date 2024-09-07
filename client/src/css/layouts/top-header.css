@@ -6,7 +6,26 @@
 }
 
 .btn__nav-toggle {
-    display: none;
+    display: block;
+    width: 1.65rem;
+    aspect-ratio: 1;
+
+    position: absolute;
+    z-index: 10000;
+    right: 1rem;
+
+    background-color: transparent;
+    background-image: url('../../assets/icons/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    cursor: pointer;
+    border: 0;
+}
+
+.btn__nav-toggle.active {
+    background-image: url('../../assets/icons/icon-close.svg');
 }
 
 .brand-name {
@@ -14,6 +33,36 @@
     font-size: var(--fs-3);
 }
 
+.nav__list {
+    display: none;
+    align-items: center;
+}
+
+.nav__list.active {
+    display: flex;  
+    justify-content: center;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+
+    background-color: var(--black);
+}
+
 .nav-link {
-    color: var(--white)
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+    .btn__nav-toggle {
+        display: none;
+    }
+
+    .nav__list {
+        display: flex;
+    }
 }

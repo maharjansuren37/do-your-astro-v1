@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import {NavLink, Outlet } from "react-router-dom";
 
 
 
 export default function RootLayout() {
-    const links = [
-        {url: '/', title: 'Home'},
-        {url:'/astrophotography', title: 'Astrophotography'},
-        {url: '/bookbindery', title: 'Bookbindery'},
-        {url: '/contact', title: 'Contact'}
-    ];
+    const [menuOpen, setMenuOpen] = useState(false);
+    // const links = [
+    //     {url: '/', title: 'Home'},
+    //     {url:'/astrophotography', title: 'Astrophotography'},
+    //     {url: '/bookbindery', title: 'Bookbindery'},
+    //     {url: '/contact', title: 'Contact'}
+    // ];
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    }
 
     return (
         <>
@@ -18,11 +23,14 @@ export default function RootLayout() {
                     <div>
                         <NavLink className='brand-name'>DYA</NavLink>
                     </div>
-                    <button className="btn btn__nav-toggle">
-                        <span>MENU</span>
+                    <button 
+                        className={`btn btn__nav-toggle ${menuOpen && `active`}`}
+                        onClick={toggleMenu}    
+                    >
+                        <span className="sr-only">MENU</span>
                     </button>
-                    <nav>
-                        <ul className="flex">
+                    <nav className="nav">
+                        <ul className={`nav__list flex ${menuOpen && 'active'}`}>
                             <NavLink to='/' className='nav-link'>Home</NavLink>
                             <NavLink to='/astrophotography' className='nav-link'>Astrophotography</NavLink>
                             <NavLink to='/bookbindery' className='nav-link'>Bookbindery</NavLink>

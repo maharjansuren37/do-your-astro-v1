@@ -1,9 +1,12 @@
 .single-banner {
-    background: var(--black);
-    min-height: 100vh;
+    background-color: var(--black);
     background-image: url('../../assets/bg-hero.webp');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+
+    padding-block: 22rem;
+    text-align: center;
 }
 
 .single-banner__title {
