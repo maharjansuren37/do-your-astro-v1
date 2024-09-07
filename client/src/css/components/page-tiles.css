@@ -21,7 +21,7 @@
 
 .page-tile__img {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 16/9;
 }
 
 @media screen and (min-width: 600px) {
