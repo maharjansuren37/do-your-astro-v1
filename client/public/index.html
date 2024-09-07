@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .preloader {
+            position: fixed;
+            z-index: 1100;
+            inset: 0;
+            min-height: 100vh;
+            
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #fff;
+            border-right: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 0.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+    </div>
 </body>
 </html>

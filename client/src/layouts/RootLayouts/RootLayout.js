@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {NavLink, Outlet } from "react-router-dom";
 
 
 
 export default function RootLayout() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrollPosition, setScrollPosition] = useState(0);
     // const links = [
     //     {url: '/', title: 'Home'},
     //     {url:'/astrophotography', title: 'Astrophotography'},
@@ -12,13 +13,26 @@ export default function RootLayout() {
     //     {url: '/contact', title: 'Contact'}
     // ];
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const position = window.scrollY;
+            setScrollPosition(position);
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
+
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     }
 
     return (
         <>
-            <header className="header">
+            <header className={`header ${scrollPosition > 0 ? 'scrolled' : ''}`}>
                 <div className="wrapper flex align-items-center justify-space-between">
                     <div>
                         <NavLink className='brand-name'>DYA</NavLink>

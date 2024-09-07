@@ -1,0 +1,22 @@
+.footer {
+    background-color: var(--white);
+    padding-block: 2rem 4rem;
+    border-top: 2px solid var(--white-light);
+}
+
+.social__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.social__icon {
+    width: 2rem;
+}
+
+.copy, .author {
+    margin-top: 2rem;
+    color: var(--black);
+}

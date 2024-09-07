@@ -5,3 +5,6 @@
 @import './layouts/top-header.css';
 @import './components/single-banner.css';
 @import './components/page-tiles.css';
+@import './components/form.css';
+@import './components/contact-form.css';
+@import './layouts/footer.css';

@@ -10,6 +10,18 @@
     gap: 1rem;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -32,4 +44,14 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap; /*added line */
     border: 0;
-  }
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .flex {
+        flex-direction: row;
+    }
+}

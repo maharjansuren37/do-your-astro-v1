@@ -3,6 +3,12 @@
     width: 100%;
     position: fixed;
     z-index: 9999;
+
+    transition: var(--transition)
+}
+
+.header.scrolled {
+    background-color: var(--black);
 }
 
 .btn__nav-toggle {

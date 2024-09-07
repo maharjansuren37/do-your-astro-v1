@@ -3,7 +3,8 @@
 :root {
     /* colors */
     --black: #000;
-    --white: #fff;
+    --white: #f3f2f1;
+    --white-light: #c5c5c5;
 
     --current-color: var(--black);
     --current-background: var(--white);
@@ -20,7 +21,7 @@
     --fs-5: 2.074rem;
     --fs-6: 2.488rem;
 
-    --transition-speed: 0.3s;
+    --transition: all 0.3s ease-out;
 
     --max-width: 900px;
 }
