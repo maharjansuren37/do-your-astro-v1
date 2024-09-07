@@ -1,3 +1,29 @@
 body {
+    color: var(--white);
+    background-color: var(--black);
     font-size: var(--fs-body);
+}
+
+h1 {
+    font-size: var(--fs-6);
+}
+
+h2 {
+    font-size: var(--fs-5);
+}
+
+h3 {
+    font-size: var(--fs-4);
+}
+
+h4 {
+    font-size: var(--fs-3);
+}
+
+h5 {
+    font-size: var(--fs-2);
+}
+
+h6 {
+    font-size: var(--fs-1);
 }

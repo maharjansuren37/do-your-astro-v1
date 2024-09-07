@@ -1,0 +1,19 @@
+.header {
+    padding-block: 1rem; 
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+}
+
+.btn__nav-toggle {
+    display: none;
+}
+
+.brand-name {
+    color: var(--white);
+    font-size: var(--fs-3);
+}
+
+.nav-link {
+    color: var(--white)
+}

@@ -1,0 +1,11 @@
+.single-banner {
+    background: var(--black);
+    min-height: 100vh;
+    background-image: url('../../assets/bg-hero.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.single-banner__title {
+    color: var(--white);
+}

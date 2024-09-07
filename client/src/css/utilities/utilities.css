@@ -1,0 +1,21 @@
+.wrapper {
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}

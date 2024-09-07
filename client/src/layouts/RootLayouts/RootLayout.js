@@ -13,18 +13,23 @@ export default function RootLayout() {
 
     return (
         <>
-            <header>
-                <div>
-                    <NavLink>Do Your Astro</NavLink>
+            <header className="header">
+                <div className="wrapper flex align-items-center justify-space-between">
+                    <div>
+                        <NavLink className='brand-name'>DYA</NavLink>
+                    </div>
+                    <button className="btn btn__nav-toggle">
+                        <span>MENU</span>
+                    </button>
+                    <nav>
+                        <ul className="flex">
+                            <NavLink to='/' className='nav-link'>Home</NavLink>
+                            <NavLink to='/astrophotography' className='nav-link'>Astrophotography</NavLink>
+                            <NavLink to='/bookbindery' className='nav-link'>Bookbindery</NavLink>
+                            <NavLink to='/contact' className='nav-link'>Contact</NavLink>
+                        </ul>
+                    </nav>
                 </div>
-                <nav>
-                    <ul>
-                        <NavLink to='/'>Home</NavLink>
-                        <NavLink to='/astrophotography'>Astrophotography</NavLink>
-                        <NavLink to='/bookbindery'>Bookbindery</NavLink>
-                        <NavLink to='/contact'>Contact</NavLink>
-                    </ul>
-                </nav>
             </header>
             <main>
                 <Outlet />

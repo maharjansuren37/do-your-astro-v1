@@ -5,12 +5,15 @@ import {
 
 import './css/index.css';
 import RootLayout from "./layouts/RootLayouts/RootLayout";
+import Home from "./pages/Home";
 
 export default function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<RootLayout />} />
+                <Route path="/" element={<RootLayout />}>
+                    <Route index element={<Home />} />
+                </Route>
             </Routes>
         </Router>        
     )
