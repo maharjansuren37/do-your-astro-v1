@@ -26,7 +26,7 @@
 }
 
 .lightbox .btn__close {
-    background-image: url('../../assets/icons/icon-close.svg');
+    background-image: url('../../../public/assets/icons/icon-close.svg');
     position: absolute;
     top: 3rem;
     right: 2rem;
@@ -44,7 +44,7 @@
 }
 
 .lightbox-controls .prev {
-    background-image: url('../../assets/icons/prev.svg');
+    background-image: url('../../../public/assets/icons/prev.svg');
 
     position: absolute;
     left: 1rem;
@@ -52,7 +52,7 @@
 }
 
 .lightbox-controls .next {
-    background-image: url('../../assets/icons/next.svg');
+    background-image: url('../../../public/assets/icons/next.svg');
     position: absolute;
     right: 1rem;
     top: 45%;

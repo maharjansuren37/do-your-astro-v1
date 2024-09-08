@@ -5,8 +5,8 @@ import PageTile from "../components/pageTile/pageTile";
 import ContactForm from "../components/contactForm/ContactForm";
 import Footer from "../components/footer/footer";
 
-import img1 from "../assets/bg-hero.webp";
-import img2 from "../assets/bindery.webp";
+import img1 from "../../public/assets/bg-hero.webp";
+import img2 from "../../public/assets/bindery.webp";
 
 export default function Home() {
     const pageTileData = [

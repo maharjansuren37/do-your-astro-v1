@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import facebook from "../../assets/icons/facebook.svg";
-import instagram from "../../assets/icons/instagram.svg"
-import twitter from "../../assets/icons/twitter.svg"
-import linkedin from "../../assets/icons/linkedin.svg"
+import facebook from "../../../public/assets/icons/social/facebook.svg";
+import instagram from "../../../public/assets/icons/social/instagram.svg"
+import twitter from "../../../public/assets/icons/social/twitter.svg"
+import linkedin from "../../../public/assets/icons/social/linkedin.svg"
 
 export default function Footer() {
     return (

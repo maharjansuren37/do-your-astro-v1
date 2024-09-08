@@ -5,6 +5,7 @@ import {
 
 import './_css/index.css';
 import RootLayout from "./layouts/RootLayouts/RootLayout";
+import AdminLayout from "./layouts/AdminLayout/AdminLayout";
 import Home from "./pages/Home";
 import Astrophotography from "./pages/Astrophotography";
 
@@ -16,6 +17,7 @@ export default function App() {
                     <Route index element={<Home />} />
                     <Route path="/astrophotography" element={<Astrophotography />} />
                 </Route>
+                <Route path="/admin" element={<AdminLayout />} />
             </Routes>
         </Router>        
     )
