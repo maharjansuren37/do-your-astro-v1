@@ -41,7 +41,9 @@ label {
     transition: var(--transition);
 }
 
-.form__btn .btn__send:hover {
+.form__btn .btn__send:hover,
+.form__btn .btn__send:focus {
+    outline: none;
     border: 1px solid var(--black);
     color: var(--black);
     background-color: var(--white);

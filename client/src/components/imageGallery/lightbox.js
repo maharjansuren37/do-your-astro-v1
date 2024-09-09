@@ -11,15 +11,16 @@ export default function Lightbox({ imageIndex, closeLightbox }) {
     ];
 
     const prev = () => {
-        if (images.length )
-        setCount(count - 1);
+        if (count > 0) {
+            setCount(count - 1);
+        }
     }
 
     const next = () => {
-        setCount(count + 1);
+        if (0 < count) {
+            setCount(count + 1);
+        } 
     }
-
-    console.log(count);
 
     return (
         <>
@@ -31,7 +32,7 @@ export default function Lightbox({ imageIndex, closeLightbox }) {
                         <img src={images[count].src} />
                         <div className="lightbox-caption">
                             <span className="lightbox-category">Test</span>
-                            <span className="lightbox-counter">{count}</span>
+                            <span className="lightbox-counter">{count + 1}</span>
                         </div>
                         <div className="lightbox-controls">
                             <button className="prev" onClick={prev}>

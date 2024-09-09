@@ -11,7 +11,7 @@ export default function PageTile({ pageTileData }) {
                             <div className="column">
                                 <h2>{data.title}</h2>
                                 <p>{data.subtitle}</p>
-                                <NavLink to={'/astrophotography'} className='btn'>Learn More</NavLink>
+                                <NavLink to={'/astrophotography'} className='btn btn__learn-more'>Learn More</NavLink>
                             </div>
                             <div className="column">
                                 <img className="page-tile__img" src={data.img} alt="galaxy" />

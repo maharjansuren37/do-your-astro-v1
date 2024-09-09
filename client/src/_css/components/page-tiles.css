@@ -24,6 +24,27 @@
     aspect-ratio: 16/9;
 }
 
+.page-tile p {
+    margin-bottom: 2rem;
+}
+
+.btn__learn-more {
+    color: var(--white);
+    border: 1px solid var(--white);
+
+    padding: 0.5rem 1rem;
+
+    transition: var(--transition);
+}
+
+.btn__learn-more:hover,
+.btn__learn-more:focus {
+    outline: none;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--white);
+}
+
 @media screen and (min-width: 600px) {
     .page-tile {
         flex-direction: row;
