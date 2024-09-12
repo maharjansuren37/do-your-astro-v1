@@ -17,9 +17,9 @@ export default function Lightbox({ imageIndex, closeLightbox }) {
     }
 
     const next = () => {
-        if (0 < count) {
+        if (count < images.length - 1) {
             setCount(count + 1);
-        } 
+        }
     }
 
     return (
