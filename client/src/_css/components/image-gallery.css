@@ -1,4 +1,9 @@
+.section__image-gallery {
+    padding-block: 2rem;
+}
+
 .image-galleries {
+    padding-block: 2rem;
     display: flex;
     flex-wrap: wrap;
 }

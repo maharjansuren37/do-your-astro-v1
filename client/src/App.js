@@ -10,19 +10,25 @@ import Home from "./pages/Home";
 import Astrophotography from "./pages/Astrophotography";
 import Bookbindery from "./pages/Bookbindery";
 import Contact from "./pages/Contact";
+import PrivateRoute from "./routes/PrivateRoute";
+import AuthProvider from "./states/AuthProvider";
 
 export default function App() {
     return (
         <Router>
-            <Routes>
-                <Route path="/" element={<RootLayout />}>
-                    <Route index element={<Home />} />
-                    <Route path="/astrophotography" element={<Astrophotography />} />
-                    <Route path="/bookbindery" element={<Bookbindery />} />
-                    <Route path="/contact" element={<Contact /> } />
-                </Route>
-                <Route path="/admin" element={<AdminLayout />} />
-            </Routes>
+            <AuthProvider>
+                <Routes>
+                    <Route path="/" element={<RootLayout />}>
+                        <Route index element={<Home />} />
+                        <Route path="/astrophotography" element={<Astrophotography />} />
+                        <Route path="/bookbindery" element={<Bookbindery />} />
+                        <Route path="/contact" element={<Contact /> } />
+                    </Route>
+                    <Route element={<PrivateRoute />}>
+                        <Route path="/admin" element={<AdminLayout />} />
+                    </Route>
+                </Routes>
+            </AuthProvider>
         </Router>        
     )
 }

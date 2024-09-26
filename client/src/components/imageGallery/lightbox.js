@@ -8,6 +8,10 @@ export default function Lightbox({ imageIndex, closeLightbox }) {
         {src: './bindery.webp'},
         {src: './bg-hero.webp'},
         {src: './bindery.webp'},
+        {src: './bg-hero.webp'},
+        {src: './bindery.webp'},
+        {src: './bg-hero.webp'},
+        {src: './bindery.webp'},
     ];
 
     const prev = () => {

@@ -10,6 +10,10 @@ export default function ImageGallery() {
         {src: './bindery.webp'},
         {src: './bg-hero.webp'},
         {src: './bindery.webp'},
+        {src: './bg-hero.webp'},
+        {src: './bindery.webp'},
+        {src: './bg-hero.webp'},
+        {src: './bindery.webp'},
     ];
 
     const openImages = (index) => {
